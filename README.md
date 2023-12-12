@@ -1,10 +1,11 @@
-Readme Generator?
+Readme Generator-
+This is a README file generator. It'll take you through the criteria requested, or return an empty string if it doesn't have any information. 
 
-
-
-Sources- 
+Sources Cited- 
 
 https://www.youtube.com/watch?v=9iVQFaRaNV8
+This guy takes you through a different but somewhat more interesting way of doing template literals. I did it this way because it seemed to jive better with how my brain wants to learn. 
+
 ## Your Task
 
 When creating an open source project on GitHub, it’s important to have a high-quality README for the app. This should include what the app is for, how to use the app, how to install it, how to report issues, and how to make contributions&mdash;this last part increases the likelihood that other developers will contribute to the success of the project. 
