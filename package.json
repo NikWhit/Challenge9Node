@@ -1,14 +1,22 @@
 {
-  "name": "static-site",
+  "name": "node9challenge",
   "version": "1.0.0",
-  "description": "",
+  "description": "Readme Generator?",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Niko",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "8.2.4"
-  }
+    "inquirer": "^8.2.4"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "Challenge9Node"
+  },
+  "keywords": [
+    "Node"
+  ]
 }
