@@ -2,6 +2,10 @@
 
 This node.js app helps to generate professional readme files. It should help developers have a quick shortcut to generate a readme for a file they've made. It is made for automation and professionalism. 
 
+
+Video showing my example:
+https://drive.google.com/file/d/1QTECM1C9-FK5JstzOhKvo18sAnTjESVA/view
+
 ## Installation
 using inquirer, please install npm using, "npm install", then you can use "npm start", or "node index.js".
 
