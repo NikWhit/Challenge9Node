@@ -1,9 +1,12 @@
 // TODO: Include packages needed for this application
-const fs = require('fs');
 const inquirer = require('inquirer');
+const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js');
+
+async function promptUser() {
+    return inquirer.prompt([
 // TODO: Create an array of questions for user input
-const questions = [
+
     {
         type: 'input',
         message: 'Project Title?\n',
@@ -41,28 +44,40 @@ const questions = [
         choices: ['None', 'MIT', 'GNU', 'ISC', 'Apache']
     },
     
-];
+]);
+}
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    let dir = './output';
-    if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir);
-    }
-        fs.writeFile(`./output/${fileName}`, data, (err) =>
-    err ? console.log(err) : console.log('README.md generated!')
-    );
+// function writeToFile(fileName, data) {
+//     let dir = './output';
+//     if (!fs.existsSync(dir)) {
+//         fs.mkdirSync(dir);
+//     }
+//         fs.writeFile(`./output/${fileName}`, data, (err) =>
+//     err ? console.log(err) : console.log('README.md generated!')
+//     );
+// }
+
+
+function writeToReadme(content) {
+    fs.writeFile('README.md', content, (err) => {
+        if (err) {
+            console.error(err);
+        } else {
+            console.log('README.md generated.');
+        }
+    });
 }
 
 // TODO: Create a function to initialize app
-function init() {
-    console.log(`This is README Generator, Answer questions to proceed.`);
-    inquirer
-    .createPromptModule(questions)
-    .then((answers) => {
-        const markdown = generateMarkdown(answers);
-            writeToFile(`README.md`, markdown);
-    });
+async function init() {
+    try {
+    const userData = await promptUser();
+    const readmeContent = generateMarkdown(userData);
+    writeToReadme(readmeContent);
+    } catch (error) {
+        console.error('Error in processing app:', error);
+    }
 }
 
 // Function call to initialize app

@@ -1,17 +1,18 @@
 {
-  "name": "node9challenge",
+  "name": "mytester",
   "version": "1.0.0",
   "description": "Readme Generator?",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "start": "node index.js"
+    },
+    "test": "echo \"Error: no test specified\" && exit 1",
+    
   "author": "Niko",
   "license": "ISC",
   "dependencies": {
     "inquirer": "^8.2.4"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "Challenge9Node"
