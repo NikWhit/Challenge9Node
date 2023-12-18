@@ -82,3 +82,6 @@ async function init() {
 
 // Function call to initialize app
 init();
+
+// For a link to the video example incase it changes, here it is. 
+//https://drive.google.com/file/d/1QTECM1C9-FK5JstzOhKvo18sAnTjESVA/view
